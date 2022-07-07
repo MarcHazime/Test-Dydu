@@ -4,7 +4,7 @@ Description
 
 ## Development
 
-To start working on the project, lauch the following commands
+To start working on the project, launch the following commands
 
 ```
 npm i
