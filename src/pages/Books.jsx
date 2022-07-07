@@ -32,9 +32,8 @@ export default function Books() {
             >
               <Table.Cell>
                 <Avatar img={book.cover} rounded size="lg" />
-                {/* <img src={book.cover} alt="Cover" className="w-1/3" /> */}
               </Table.Cell>
-              <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+              <Table.Cell className="whitespace-nowrap font-medium text-l text-gray-900 dark:text-white">
                 {book.title}
               </Table.Cell>
               <Table.Cell>{book.author}</Table.Cell>

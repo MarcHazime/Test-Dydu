@@ -15,6 +15,8 @@ export default function BooksDetail() {
         })()
     }, [bookId])
 
+    // tableau de dépendance pour remonter l'élement si il y'a un changement de params
+
     return (
         <div className="w-full h-screen flex items-center justify-center">
             {book ? (
@@ -24,11 +26,14 @@ export default function BooksDetail() {
                             <img src={book.cover} alt="cover" />
                         </a>
                         <div className="p-5">
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{book.title}</h5>
-                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{book.author}</p>
-                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">isbn: {book.isbn}</p>
+                            <h4 className="text-xl text-blue-900 font-bold">Title:</h4>
+                            <p className="mb-2 text-xl italic tracking-tight text-gray-900 dark:text-white">{book.title}</p>
+                            <h4 className="text-xl text-blue-900 font-bold">Author:</h4>
+                            <p className="mb-2 text-xl  italic tracking-tight text-gray-900 dark:text-white">{book.author}</p>
+                            <h4 className="text-xl text-blue-900 font-bold">isbn:</h4>
+                            <p className="mb-2 text-xl  italic tracking-tight text-gray-900 dark:text-white">{book.isbn}</p>
 
-                            <h2 className="mb-4 text-lg">From the same author</h2>
+                            <h4 className="text-xl text-blue-900 font-bold">From the same author</h4>
 
                             <ListGroup>
                                 {book.books.map((book) => (
